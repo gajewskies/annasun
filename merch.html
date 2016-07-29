@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Merchandise ANNASUN</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+
+  </head>
+  <style>
+    body {
+      font-family: 'PT Serif', serif;
+    }
+
+    .date {
+      height:150vh;
+      background-image: url("./images/Annsun10.jpg");
+      background-size: cover;
+      width: 100%;
+    }
+    .content {
+      margin-left: auto;
+      margin-right: auto;
+      top: 200px;
+      position: relative;
+      width: 40%;
+      height: 60%;
+      background-color: rgba(93, 56, 82, 0.5);
+    }
+    .content_2 {
+      right: -6%;
+      top: -6%;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(93, 56, 82, 0.5);
+    }
+
+    .music_bar {
+        background-color: rgba(93, 56, 82, 0.5);
+        width: 18%;
+        position: absolute;;
+        top: 9%;
+        right: 2.5%;
+    }
+
+    #pButton {
+       height:60px;
+       width: 60px;
+       border: none;
+       background-size: 50% 50%;
+       background-position: center;
+    }
+    .play {
+      background: url('./images/play.jpg') no-repeat;
+      width: 25px;
+    }
+    .pause {
+      background: url('./images/pause.jpg') no-repeat;
+      width: 30px;
+    }
+
+    #timeline{
+      width: 75%;
+      height: 5px;
+      background: white;
+      z-index: 10;
+      position: absolute;
+      right: 25px;
+      top: 48%;
+    }
+
+    #playhead{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-top: -2px;
+      background: white;
+    }
+    .title_header {
+      color: white;
+      font-size: 70px;
+       font-family: 'BebasNeue' !important;
+      top: 20px;
+      position: relative;
+      display: block;
+    }
+    .header_1 {
+      color: white;
+      font-weight: 100;
+      font-size: 70px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* container properties */
+  	.scrollbar {
+  		width:70%;
+  		max-width:100%;
+  		overflow-y:scroll;
+      bottom: 10px;
+      margin: auto;
+      position: relative;
+      top: 70px;
+  	}
+
+  	/* customize scrollbar css */
+  	#scrollbar-custom::-webkit-scrollbar{
+      width: 20px;
+  		background-color:#a3a3c2;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar:horizontal{
+  		height:12px;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar-track{
+  		border-radius:1px;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar-thumb{
+      width: 15px;
+  	  background-color: white;
+  		border-radius:1px;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar-thumb:hover{
+  		background-color: white;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar-thumb:active{
+  		background-color: white;
+  	}
+
+    .dateData {
+      color: white;
+      font-size: 14px;
+      width: 100%;
+      height: 600px;
+      /*margin: auto;
+      padding-left: 50px;*/
+    }
+
+    .navbar {
+      margin-bottom: 0;
+      font-family: 'Arial', sans-serif;
+    }
+    @font-face {
+      font-family: 'BebasNeue';
+      src: url('font/BebasNeue.eot?#iefix') format('embedded-opentype'),  url('font/BebasNeue.otf')  format('font/opentype'),
+    	     url('font/BebasNeue.woff') format('woff'), url('font/BebasNeue.ttf')  format('truetype'), url('font/BebasNeue.svg#BebasNeue') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .item1 {
+      /*background-image: url("images/poster.jpg");*/
+      background-size: cover;
+      width: 225px;
+      height: 275px;
+      background-color: #978893;
+    }
+
+    .item2 {
+      /*background-image: url("images/poster2.jpg");*/
+      background-size: cover;
+      width: 225px;
+      height: 275px;
+      background-color: #978893;
+    }
+
+    .item3 {
+      /*background-image: url("images/poster1.jpg");*/
+      background-size: cover;
+      width: 225px;
+      height: 275px;
+      background-color: #978893;
+    }
+
+    .item4 {
+      /*background-image: url("images/poster4.jpg");*/
+      background-size: cover;
+      width: 225px;
+      height: 275px;
+      background-color: #978893;
+    }
+
+    .table-scroll {
+      overflow:auto;
+      height: 320px;
+    }
+
+    th, td {
+      padding: 10px;
+    }
+
+    table {
+      width: 98%;
+    }
+
+    .customNav {
+      width: 75%;
+      left: 10px;
+      top: 25px;
+      border-radius: 0px;
+      background-color: rgba(93, 56, 82, 0.5);
+      border-style: none;
+    }
+    .nav.navbar-nav.navbar-right li a {
+        color: white;
+    }
+
+    .color-me {
+      color:white;
+    }
+    .navbar-nav > li > .dropdown-menu {
+      background-color: #978893;
+      border-style: none;
+    }
+
+
+  </style>
+
+  <nav class="navbar navbar-default">
+       <div class="container-fluid">
+         <div id="navbar" class="navbar-collapse collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="home.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="blog.html">Blog</a></li>
+             <li><a href="videos.html">Videos</a></li>
+             <li><a href="gang.html">Good Friend Gang</a></li>
+             <li><a href="dates.html">Gigs</a></li>
+             <li><a href="merch.html">Merchandise</a></li>
+           </ul>
+         </div><!--/.nav-collapse -->
+       </div><!--/.container-fluid -->
+     </nav>
+
+  <body>
+    <div class="music_bar">
+      <audio id="music" preload="true">
+        <source src="music/music1.mp3">
+      </audio>
+      <div id="audioplayer">
+         <button id="pButton" class="play" onclick="play()"></button>
+         <div id="timeline">
+           <div id="playhead"></div>
+         </div>
+       </div>
+     </div>
+
+     <div class="date">
+       <div class="content">
+         <div class="content_2">
+           <p class="title_header">ANNASUN <span class="header_1">MERCHANDISE</span> </p>
+           <nav class="customNav navbar navbar-default">
+                <div class="container-fluid">
+                  <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav  navbar-right">
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MEN <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a class="color-me" href="#">T-SHIRTS</a></li>
+                          <li><a class="color-me" href="#">SWEATSHIRTS</a></li>
+                          <li><a class="color-me" href="#">FAN GEAR</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">WOMEN <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a class="color-me" href="#">T-SHIRTS</a></li>
+                          <li><a class="color-me" href="#">SWEATSHIRTS</a></li>
+                          <li><a class="color-me" href="#">FAN GEAR</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+              </nav>
+
+            <div class="scrollbar" id="scrollbar-custom">
+             <div class="dateData">
+               <table>
+                 <tbody>
+                   <tr>
+                     <td>
+                       <div class="item1"></div>
+                     </td>
+                     <td>
+                       <div class="item2"></div>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                       <div class="itemName">
+                         NO MERCH AT THIS TIME
+                       </div>
+                     </td>
+                     <td>
+                       <div class="itemName">
+                         NO MERCH AT THIS TIME
+                       </div>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                       <div class="item3"></div>
+                     </td>
+                     <td>
+                       <div class="item4"></div>
+                     </td>
+                   </tr>
+                   <tr>
+                     <td>
+                       <div class="itemName">
+                         NO MERCH AT THIS TIME
+                       </div>
+                     </td>
+                     <td>
+                       <div class="itemName">
+                         NO MERCH AT THIS TIME
+                       </div>
+                     </td>
+                   </tr>
+                 </tbody>
+               </table>
+           </div>
+         </div>
+         </div>
+       </div>
+     </div>
+
+     <script type="text/javascript">
+     var music = document.getElementById('music'); // id for audio element
+     var duration; // Duration of audio clip
+     var pButton = document.getElementById('pButton'); // play button
+
+     var playhead = document.getElementById('playhead'); // playhead
+
+     var timeline = document.getElementById('timeline'); // timeline
+     // timeline width adjusted for playhead
+     var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+     // timeupdate event listener
+     music.addEventListener("timeupdate", timeUpdate, false);
+
+     //Makes timeline clickable
+     timeline.addEventListener("click", function (event) {
+      moveplayhead(event);
+      music.currentTime = duration * clickPercent(event);
+     }, false);
+
+     // returns click as decimal (.77) of the total timelineWidth
+     function clickPercent(e) {
+      return (e.pageX - timeline.offsetLeft) / timelineWidth;
+     }
+
+     // Makes playhead draggable
+     playhead.addEventListener('mousedown', mouseDown, false);
+     window.addEventListener('mouseup', mouseUp, false);
+
+     // Boolean value so that mouse is moved on mouseUp only when the playhead is released
+     var onplayhead = false;
+     // mouseDown EventListener
+     function mouseDown() {
+      onplayhead = true;
+      window.addEventListener('mousemove', moveplayhead, true);
+      music.removeEventListener('timeupdate', timeUpdate, false);
+     }
+     // mouseUp EventListener
+     // getting input from all mouse clicks
+     function mouseUp(e) {
+      if (onplayhead == true) {
+        moveplayhead(e);
+        window.removeEventListener('mousemove', moveplayhead, true);
+        // change current time
+        music.currentTime = duration * clickPercent(e);
+        music.addEventListener('timeupdate', timeUpdate, false);
+      }
+      onplayhead = false;
+     }
+     // mousemove EventListener
+     // Moves playhead as user drags
+     function moveplayhead(e) {
+      var newMargLeft = e.pageX - timeline.offsetLeft;
+      if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+        playhead.style.marginLeft = newMargLeft + "px";
+      }
+      if (newMargLeft < 0) {
+        playhead.style.marginLeft = "0px";
+      }
+      if (newMargLeft > timelineWidth) {
+        playhead.style.marginLeft = timelineWidth + "px";
+      }
+     }
+
+     // timeUpdate
+     // Synchronizes playhead position with current point in audio
+     function timeUpdate() {
+      var playPercent = timelineWidth * (music.currentTime / duration);
+      playhead.style.marginLeft = playPercent + "px";
+      if (music.currentTime == duration) {
+        pButton.className = "";
+        pButton.className = "play";
+      }
+     }
+
+     //Play and Pause
+     function play() {
+      // start music
+      if (music.paused) {
+        music.play();
+        // remove play, add pause
+        pButton.className = "";
+        pButton.className = "pause";
+      } else { // pause music
+        music.pause();
+        // remove pause, add play
+        pButton.className = "";
+        pButton.className = "play";
+      }
+     }
+
+     // Gets audio file duration
+     music.addEventListener("canplaythrough", function () {
+      duration = music.duration;
+     }, false);
+
+     </script>
+  </body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Anna</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+    .home {
+      height:150vh;
+      background-image: url("./images/Annasun15.jpg");
+      background-size: cover;
+      width: 100%;
+    }
+    .about {
+      height:150vh;
+      background-image: url("./images/Annasun13.jpg");
+      background-size: cover;
+      width: 100%;
+    }
+    .videos {
+      height:150vh;
+      background-image: url("./images/Annasun9.jpg");
+      background-size: cover;
+      width: 100%;
+    }
+    .blog {
+      height:150vh;
+      background-image: url("./images/Annasun21.jpg");
+      background-size: cover;
+      width: 100%;
+    }
+    .gang {
+      height:150vh;
+      background-image: url("./images/Annasun12.jpg");
+      background-size: cover;
+      width: 100%;
+    }
+    .dates {
+      height:150vh;
+      background-image: url("./images/Annasun5.jpg");
+      background-size: cover;
+      width: 100%;
+    }
+    .merch {
+      height: 150vh;
+      background-image: url("./images/Annsun10.jpg");
+      background-size: cover;
+      width: 100%;
+    }
+    .content {
+      margin-left: auto;
+      margin-right: auto;
+      top: 100px;
+      position: relative;
+      width: 40%;
+      height: 80%;
+      background-color: rgba(86, 33, 89, 0.5);
+    }
+    .content_2 {
+      right: -6%;
+      top: -6%;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(86, 33, 89, 0.5);
+    }
+
+    .music_bar {
+        background-color: rgba(86, 33, 89, 0.5);
+        width: 20%;
+        position: fixed;
+        top: 5%;
+        left: 2.5%;
+    }
+
+    #pButton {
+       height:60px;
+       width: 60px;
+       border: none;
+       background-size: 50% 50%;
+       background-position: center;
+    }
+    .play {
+      background: url('./images/play.jpg') no-repeat;
+      width: 25px;
+    }
+    .pause {
+      background: url('./images/pause.jpg') no-repeat;
+      width: 30px;
+    }
+
+    #timeline{
+      width: 75%;
+      height: 5px;
+      background: white;
+      z-index: 10;
+      position: absolute;
+      right: 5px;
+      top: 48%;
+    }
+
+    #playhead{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-top: -2px;
+      background: white;
+    }
+    .title_header {
+      margin-top: 6%;
+      color: white;
+      font-size: 36px;
+    }
+    .header {
+      color: white;
+      font-size: 72px;
+    }
+    .aboutme {
+      color: white;
+      font-size: 10px;
+      width: 50%;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="music_bar">
+      <audio id="music" preload="true">
+        <source src="music/music.mp3">
+    	</audio>
+      <div id="audioplayer">
+    	   <button id="pButton" class="play" onclick="play()"></button>
+         <div id="timeline">
+           <div id="playhead"></div>
+         </div>
+       </div>
+     </div>
+
+    <div class="home">
+
+    </div>
+
+    <div class="about">
+      <div class="content">
+        <div class="content_2">
+          <p class="title_header">ABOUT <span class="header">ANNASUN</span> </p>
+          <span class="aboutme">
+          Look, just because I don’t be givin’ no man a foot massage don’t
+          make it right for Marsellus to throw Antwone into a glass moth-
+          erfuckin’ house, fuckin’ up the way the nigger talks. Motherfuck-
+          er do that shit to me, he better paralyze my ass, ‘cause I’ll kill the
+          motherfucker, know what I’m sayin’? Now that there is the Tec-9,
+          a crappy spray gun from South Miami. This gun is advertised as
+          the most popular gun in American crime. Do you believe that
+          shit? It actually says that in the little book that comes with it: the
+          most popular gun in American crime. Like they’re actually proud
+          of that shit. Now that there is the Tec-9, a crappy spray gun from
+          South Miami. This gun is advertised as the most popular gun in
+          American crime. Do you believe that shit? It actually says that in
+          the little book that comes with it: the most popular gun in Amer-
+          ican crime. Like they’re actually proud of that shit. Look, just be-
+          cause I don’t be givin’ no man a foot massage don’t make it right
+          for Marsellus to throw Antwone into a glass motherfuckin’ house,
+          fuckin’ up the way the nigger talks. Motherfucker do that shit to
+          me, he better paralyze my ass, ‘cause I’ll kill the motherfucker,
+          know what I’m sayin’?
+          Do you see any Teletubbies in here? Do you see a slender plastic
+          tag clipped to my shirt with my name printed on it? Do you see a
+          little Asian child with a blank expression on his face sitting out-
+          side on a mechanical helicopter that shakes when you put quar-
+          ters in it? No? Well, that’s what you see at a toy store. And you
+          must think you’re in a toy store, because you’re here shopping for
+          an infant named Jeb.
+        </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog">
+      <div class="content">
+        <div class="content_2">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="videos">
+      <div class="content">
+        <div class="content_2">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="gang">
+      <div class="content">
+        <div class="content_2">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="dates">
+      <div class="content">
+        <div class="content_2">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="merch">
+      <div class="content">
+        <div class="content_2">
+
+        </div>
+      </div>
+    </div>
+
+  <script type="text/javascript">
+  var music = document.getElementById('music'); // id for audio element
+  var duration; // Duration of audio clip
+  var pButton = document.getElementById('pButton'); // play button
+
+  var playhead = document.getElementById('playhead'); // playhead
+
+  var timeline = document.getElementById('timeline'); // timeline
+  // timeline width adjusted for playhead
+  var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+  // timeupdate event listener
+  music.addEventListener("timeupdate", timeUpdate, false);
+
+  //Makes timeline clickable
+  timeline.addEventListener("click", function (event) {
+  	moveplayhead(event);
+  	music.currentTime = duration * clickPercent(event);
+  }, false);
+
+  // returns click as decimal (.77) of the total timelineWidth
+  function clickPercent(e) {
+  	return (e.pageX - timeline.offsetLeft) / timelineWidth;
+  }
+
+  // Makes playhead draggable
+  playhead.addEventListener('mousedown', mouseDown, false);
+  window.addEventListener('mouseup', mouseUp, false);
+
+  // Boolean value so that mouse is moved on mouseUp only when the playhead is released
+  var onplayhead = false;
+  // mouseDown EventListener
+  function mouseDown() {
+  	onplayhead = true;
+  	window.addEventListener('mousemove', moveplayhead, true);
+  	music.removeEventListener('timeupdate', timeUpdate, false);
+  }
+  // mouseUp EventListener
+  // getting input from all mouse clicks
+  function mouseUp(e) {
+  	if (onplayhead == true) {
+  		moveplayhead(e);
+  		window.removeEventListener('mousemove', moveplayhead, true);
+  		// change current time
+  		music.currentTime = duration * clickPercent(e);
+  		music.addEventListener('timeupdate', timeUpdate, false);
+  	}
+  	onplayhead = false;
+  }
+  // mousemove EventListener
+  // Moves playhead as user drags
+  function moveplayhead(e) {
+  	var newMargLeft = e.pageX - timeline.offsetLeft;
+  	if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+  		playhead.style.marginLeft = newMargLeft + "px";
+  	}
+  	if (newMargLeft < 0) {
+  		playhead.style.marginLeft = "0px";
+  	}
+  	if (newMargLeft > timelineWidth) {
+  		playhead.style.marginLeft = timelineWidth + "px";
+  	}
+  }
+
+  // timeUpdate
+  // Synchronizes playhead position with current point in audio
+  function timeUpdate() {
+  	var playPercent = timelineWidth * (music.currentTime / duration);
+  	playhead.style.marginLeft = playPercent + "px";
+  	if (music.currentTime == duration) {
+  		pButton.className = "";
+  		pButton.className = "play";
+  	}
+  }
+
+  //Play and Pause
+  function play() {
+  	// start music
+  	if (music.paused) {
+  		music.play();
+  		// remove play, add pause
+  		pButton.className = "";
+  		pButton.className = "pause";
+  	} else { // pause music
+  		music.pause();
+  		// remove pause, add play
+  		pButton.className = "";
+  		pButton.className = "play";
+  	}
+  }
+
+  // Gets audio file duration
+  music.addEventListener("canplaythrough", function () {
+  	duration = music.duration;
+  }, false);
+
+
+
+
+  </script>
+  </body>
+</html>
