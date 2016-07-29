@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Good friend gang ANNASUN</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+    </head>
+  <style>
+    body {
+      font-family: 'PT Serif', serif;
+    }
+
+    .gang {
+      height:150vh;
+      background-image: url("./images/Annasun12.jpg");
+      background-size: cover;
+      width: 100%;
+    }
+    .content {
+      margin-left: auto;
+      margin-right: auto;
+      top: 200px;
+      position: relative;
+      width: 50%;
+      height: 60%;
+      background-color: rgba(93, 56, 82, 0.5);
+    }
+    .content_2 {
+      right: -6%;
+      top: -6%;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(93, 56, 82, 0.5);
+    }
+
+    .music_bar {
+        background-color: rgba(93, 56, 82, 0.5);
+        width: 18%;
+        position: absolute;;
+        top: 9%;
+        right: 2.5%;
+    }
+
+    #pButton {
+       height:60px;
+       width: 60px;
+       border: none;
+       background-size: 50% 50%;
+       background-position: center;
+    }
+    .play {
+      background: url('./images/play.jpg') no-repeat;
+      width: 25px;
+    }
+    .pause {
+      background: url('./images/pause.jpg') no-repeat;
+      width: 30px;
+    }
+
+    #timeline{
+      width: 75%;
+      height: 5px;
+      background: white;
+      z-index: 10;
+      position: absolute;
+      right: 25px;
+      top: 48%;
+    }
+
+    #playhead{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-top: -2px;
+      background: white;
+    }
+    .title_header {
+      color: white;
+      font-size: 80px;
+       font-family: 'BebasNeue' !important;
+      top: 20px;
+      position: relative;
+      display: block;
+    }
+
+    .header_1 {
+      color: white;
+      font-size: 80px;
+      font-weight: 100;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    /* container properties */
+  	.scrollbar {
+  		width:90%;
+  		max-width:100%;
+  		overflow-y:scroll;
+      direction: rtl;
+      bottom: 10px;
+      margin-left: 15px;
+      position: relative;
+      top: 70px;
+  	}
+
+    .scrollbar_2 {
+      width:300px;
+      max-width:100%;
+      overflow-y:scroll;
+      direction: rtl;
+      bottom: 10px;
+      margin-left: 15px;
+      position: relative;
+      top: 70px;
+    }
+
+
+  	/* customize scrollbar css */
+  	#scrollbar-custom::-webkit-scrollbar{
+      width: 20px;
+  		background-color:#a3a3c2;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar:horizontal{
+  		height:12px;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar-track{
+  		border-radius:1px;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar-thumb{
+      width: 15px;
+  	  background-color: white;
+  		border-radius:1px;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar-thumb:hover{
+  		background-color: white;
+  	}
+  	#scrollbar-custom::-webkit-scrollbar-thumb:active{
+  		background-color: white;
+  	}
+
+    .pics {
+      width: 320px;
+      height: 220px;
+    }
+
+    .pics1 {
+      height: 320px;
+      width: 280px;
+    }
+
+    .gangPics {
+      color: white;
+      font-size: 14px;
+      width: 90%;
+      height: 600px;
+      margin: auto;
+      padding-left: 50px;
+      direction: ltr;
+    }
+
+    .gangMsg {
+      background-color: rgba(93, 56, 82, 0.5);
+      color: white;
+      font-size: 14px;
+      width: 90%;
+      height: 600px;
+      margin: auto;
+      padding-left: 50px;
+      direction: ltr;
+    }
+
+    .pictures {
+
+    }
+
+    .messages {
+      bottom: 120px;
+      right: 90px;
+      position: absolute;
+    }
+
+    .welcome {
+      color: white;
+      width: 230px;
+      right: 120px;
+      top: 40px;
+      position: absolute;
+    }
+
+    .navbar {
+      margin-bottom: 0;
+            font-family: 'Arial', sans-serif;
+    }
+    @font-face {
+      font-family: 'BebasNeue';
+      src: url('font/BebasNeue.eot?#iefix') format('embedded-opentype'),  url('font/BebasNeue.otf')  format('font/opentype'),
+    	     url('font/BebasNeue.woff') format('woff'), url('font/BebasNeue.ttf')  format('truetype'), url('font/BebasNeue.svg#BebasNeue') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+
+  <nav class="navbar navbar-default">
+       <div class="container-fluid">
+         <div id="navbar" class="navbar-collapse collapse">
+           <ul class="nav navbar-nav">
+             <li><a href="home.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="blog.html">Blog</a></li>
+             <li><a href="videos.html">Videos</a></li>
+             <li><a href="gang.html">Good Friend Gang</a></li>
+             <li><a href="dates.html">Gigs</a></li>
+             <li><a href="merch.html">Merchandise</a></li>
+           </ul>
+         </div><!--/.nav-collapse -->
+       </div><!--/.container-fluid -->
+     </nav>
+
+
+  <body>
+    <div class="music_bar">
+      <audio id="music" preload="true">
+        <source src="music/music1.mp3">
+      </audio>
+      <div id="audioplayer">
+         <button id="pButton" class="play" onclick="play()"></button>
+         <div id="timeline">
+           <div id="playhead"></div>
+         </div>
+       </div>
+     </div>
+
+     <div class="gang">
+       <div class="content">
+         <div class="content_2">
+           <p class="title_header">THE GOOD FRIEND GANG</p>
+
+           <div class="pictures">
+             <div class="scrollbar" id="scrollbar-custom">
+               <div class="gangPics">
+                <img class="pics1" src="./images/photoGang.jpg" alt="" />
+                <br><br>
+                <img class="pics" src="./images/Annasun1.jpg" alt="" />
+                <br><br>
+                <img class="pics" src="./images/Annasun2.jpg" alt="" />
+                <br><br>
+                <img class="pics" src="./images/Annasun3.jpg" alt="" />
+                <br><br>
+                <img class="pics" src="./images/Annasun4.jpg" alt="" />
+                <br><br>
+                <img class="pics" src="./images/Annasun5.jpg" alt="" />
+                <br><br>
+                <img class="pics" src="./images/Annasun7.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="welcome">
+            Post pictures of you and your good friend to the good friend gang page! Also feel free to post fan comments about the band and ask questions.
+          </div>
+
+            <div class="messages">
+             <div class="scrollbar_2" id="scrollbar-custom">
+              <div class="gangMsg">
+                <p>
+                5:45pm
+                <br><br>
+                love your music! Can’t wait to hear more.
+                <br><br>
+                7:20pm
+                <br><br>
+                y’a’ll are the bomb yo.
+                <br><br>
+                5:45pm
+                <br><br>
+                love your music! Can’t wait to hear more.
+                <br><br>
+                7:20pm
+                <br><br>
+                y’a’ll are the bomb yo.
+              </p>
+              </div>
+            </div>
+          </div>
+
+         </div>
+       </div>
+     </div>
+
+     <script type="text/javascript">
+     var music = document.getElementById('music'); // id for audio element
+     var duration; // Duration of audio clip
+     var pButton = document.getElementById('pButton'); // play button
+
+     var playhead = document.getElementById('playhead'); // playhead
+
+     var timeline = document.getElementById('timeline'); // timeline
+     // timeline width adjusted for playhead
+     var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+     // timeupdate event listener
+     music.addEventListener("timeupdate", timeUpdate, false);
+
+     //Makes timeline clickable
+     timeline.addEventListener("click", function (event) {
+      moveplayhead(event);
+      music.currentTime = duration * clickPercent(event);
+     }, false);
+
+     // returns click as decimal (.77) of the total timelineWidth
+     function clickPercent(e) {
+      return (e.pageX - timeline.offsetLeft) / timelineWidth;
+     }
+
+     // Makes playhead draggable
+     playhead.addEventListener('mousedown', mouseDown, false);
+     window.addEventListener('mouseup', mouseUp, false);
+
+     // Boolean value so that mouse is moved on mouseUp only when the playhead is released
+     var onplayhead = false;
+     // mouseDown EventListener
+     function mouseDown() {
+      onplayhead = true;
+      window.addEventListener('mousemove', moveplayhead, true);
+      music.removeEventListener('timeupdate', timeUpdate, false);
+     }
+     // mouseUp EventListener
+     // getting input from all mouse clicks
+     function mouseUp(e) {
+      if (onplayhead == true) {
+        moveplayhead(e);
+        window.removeEventListener('mousemove', moveplayhead, true);
+        // change current time
+        music.currentTime = duration * clickPercent(e);
+        music.addEventListener('timeupdate', timeUpdate, false);
+      }
+      onplayhead = false;
+     }
+     // mousemove EventListener
+     // Moves playhead as user drags
+     function moveplayhead(e) {
+      var newMargLeft = e.pageX - timeline.offsetLeft;
+      if (newMargLeft >= 0 && newMargLeft <= timelineWidth) {
+        playhead.style.marginLeft = newMargLeft + "px";
+      }
+      if (newMargLeft < 0) {
+        playhead.style.marginLeft = "0px";
+      }
+      if (newMargLeft > timelineWidth) {
+        playhead.style.marginLeft = timelineWidth + "px";
+      }
+     }
+
+     // timeUpdate
+     // Synchronizes playhead position with current point in audio
+     function timeUpdate() {
+      var playPercent = timelineWidth * (music.currentTime / duration);
+      playhead.style.marginLeft = playPercent + "px";
+      if (music.currentTime == duration) {
+        pButton.className = "";
+        pButton.className = "play";
+      }
+     }
+
+     //Play and Pause
+     function play() {
+      // start music
+      if (music.paused) {
+        music.play();
+        // remove play, add pause
+        pButton.className = "";
+        pButton.className = "pause";
+      } else { // pause music
+        music.pause();
+        // remove pause, add play
+        pButton.className = "";
+        pButton.className = "play";
+      }
+     }
+
+     // Gets audio file duration
+     music.addEventListener("canplaythrough", function () {
+      duration = music.duration;
+     }, false);
+
+     </script>
+  </body>
+</html>
